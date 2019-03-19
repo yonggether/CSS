@@ -1,6 +1,4 @@
-:root {
-  --first-color: #2f8bff;
-  --second-color: #2f8bff;
-  --third-color: #64C8FF;
-  --forth-color: #64C8FF;
+html {
+    background: linear-gradient(#def0ff, #c3e3ff);
+    background-attachment: fixed;
 }
