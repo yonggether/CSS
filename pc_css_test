@@ -1,1 +1,6 @@
-
+:root {
+  --first-color: #2f8bff;
+  --second-color: #2f8bff;
+  --third-color: #64C8FF;
+  --forth-color: #64C8FF;
+}
