@@ -1,1412 +1,652 @@
-:root {
-
-  --first-color: #2f8bff;
-  --second-color: #2f8bff;
-  --third-color: #64C8FF;
-  --forth-color: #64C8FF;
-
-}
-
-header.row> div:container(1)>.row{
-background: #E6F6DA;
-border-bottom: 4px solid #2f8bff;
-height: 192px;
-text-align: center;
-padding: 4px 0;
-position: relative
-top: 0;
-left: 0;
-z-index: 3000;
-
-}
-
-header>.container>.nav-up{
-top: -62px;
-}
-
-#board-info{
-margin-top: 5px;
-border-top: 2px solid #E6F6DA;
-}
-/* 최상단 간격 */
-.col-xs-4 {
-    width: 33.33333333%;
-    margin-top: 0px;
-}
-
-/* 로고 애니매이션은 로고 등장 애니메이션 현재 뒤에서 앞으로 바운스로 들어옴 */
-header .row>div:nth-child(1)>a {
-    margin-bottom: 2px;
-    display: block;
-    background: url(https://upload.tgd.kr/20181029/f8665ae79ccf5b6b260454db16026fcc.png) no-repeat;
-    background-size: 240px auto;
-    background-repeat: no-repeat;
-    width: 240px;
-    height: 58px;
-    position: relative;
-    left: 50%;
-    top: 7px;
-    float: left;
-    margin-left: -150px;
-    margin-top: 45px;
-    -webkit-animation: bounce-in-fwd;
-    animation: bounce-in-fwd;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
-    transition: all 1.5s cubic-bezier(0.12, 0.26, 0.57, 1);
-}
-
-
-
-/*로그 이미지 마우스 오버 액션*/
-header .row > div:nth-child(1) > a:hover{
-    background: url(https://upload.tgd.kr/20181029/6c781a67126488e255469ee0618b971a.png) no-repeat;
-    background-size: 240px auto;
-    background-repeat: no-repeat;
-    width: 240px;
-    height: 58px;
-    position: relative;
-/* margin-up:3px; 밑에랑 결과는 같다고 생각 됨*/
-  transform: translateY(-3px);  
-  filter: drop-shadow(8px 8px 8px green);
-  transition: all 0.75s;
-  } 
- 
-@-webkit-keyframes bounce-in-fwd {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    opacity: 0;
-  }
-  38% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  55% {
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  72% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  81% {
-    -webkit-transform: scale(0.84);
-            transform: scale(0.84);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  89% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  95% {
-    -webkit-transform: scale(0.95);
-            transform: scale(0.95);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-}
-@keyframes bounce-in-fwd {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    opacity: 0;
-  }
-  38% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  55% {
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  72% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  81% {
-    -webkit-transform: scale(0.84);
-            transform: scale(0.84);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  89% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  95% {
-    -webkit-transform: scale(0.95);
-            transform: scale(0.95);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-}
-
-/* 게시판이름 순위 유저수 박스 중간 라인 */
-#board-info h1 {
-    font-size: 27px;
-    vertical-align: top;
-    padding-bottom: 3px;
-    border-bottom: 1px solid #2b9cff;
-}
-
-#board-info #viewers-area {
-    font-size: 15px;
-    color: rgba(14, 84, 136, 0.77);
-    font-weight: bold;
-    vertical-align: middle;
-    line-height: 18px;
-    display: inline-block;
-}
-/* 감시인원 색상 */
-#viewers {
-    color: #f00;
-}
-
-#board-info #viewers-area #viewers:before {
-    content: " 부장님 ";
-    cursor: text;
-    color: #427ba5;
-}
-
-#board-info #viewers-area #viewers:after {
-    content: "명 용용이 감시중";
-    cursor: text;
-    color: #427ba5;
-}
-
-header .row>div:nth-child(1)>a img {
-    opacity: 0
-}
-/*전체 바탕 색*/
 html {
-	background: linear-gradient(#E6F6DA, #E6F6DA);
+  height:auto !important;
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(top, #ffffff 0%, #fcd6d6 81%, #ff8787 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ffffff 0%,#fcd6d6 81%,#ff8787 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ffffff 0%,#fcd6d6 81%,#ff8787 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ff8787',GradientType=0 ); /* IE6-9 */
 }
+
 body {
-    background: 0 0
-}
-/* 전체 쉐도우 */
-header #header-bar>.row,
+  background: transparent;
+  animation: snow 20s linear infinite;
 
-#main .menu-wrapper,
 
-#main #main-content>div.frame {
-
-  box-shadow: 0px 0px 0px #80BBE8;
-
-}
-/* 헤더 검색 버튼 */
-header #right-search-form>#right-search-btn {
-    position: relative;
-    right: -46px;
-    top: 57px;
-    color: var(--third-color);
-
-}
-/* 상단 검색바 */
-header :first-child>.row>.col-xs-8 {
-
-  position: relative;
-  width: 265px;
-  height: 44px;
-  right: -400px;
-  bottom: 2px;
+  /* 백그라운드 이미지 원근감느낌 이미지 */
+  background-image:url('https://cdn.discordapp.com/attachments/460145928850898945/515694458633846831/snow.png'),
+  url("https://cdn.discordapp.com/attachments/460145928850898945/515694460668084274/snow3.png"),
+  url("https://cdn.discordapp.com/attachments/460145928850898945/515694462278828073/snow2.png");
 }
 
-header #right-search-form
-{
-	background-repeat:no-repeat;	
-	display: block;
-	width : 265px;
-	height: 44px;
-	position: relative; top: 10px; right: 10px;
+
+/* container */
+header .container {
+  padding-top: 30px;
 }
 
-header #right-search-form > #right-search-btn {
-    color: #5ba3ff;
-    background: transparent;
-    border: none;
-    font-size: 16pt;
+
+/* logo */
+header .row > div:nth-child(1) > a {
+  background-repeat: no-repeat;
+  display: block;
+  width: var(--logo-Width);
+  height: var(--logo-Height);
+  background-image: var(--logo-URL);
 }
-header #right-search-form > input[type=text] {
-    position: relative;
-    left: 50px;
-    bottom: -56px;
-    border: 3px solid #5ba3ff;
-    background: #fff;
-    font-size: 16px;
-    padding: 5px 8px;
-    border-radius: 3px;
-    box-shadow: 0px 0px 0px grey;
+header .row > div:nth-child(1) > a img {
+  display:none;
 }
-/* 로고밑 bar */
+
+
+/* DefaultColor */
+header #header-bar {
+  margin-top: 0.2em;
+  margin-bottom: 1em;
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
 header #header-bar>.row {
-    border-top: 5px solid var(--second-color);
-    border-right: 5px solid var(--second-color);
-    border-bottom: 5px solid var(--second-color);	
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-    background: #c3e3ff;
-    height: 45px;
+  animation-name: Gradient;
+  animation-duration: 15s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+
+  /*
+  background: linear-gradient(-45deg,#ffb8b8,#d7abff,#9ea3e3,#93efd9);
+  background-image: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  */
+
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: 400% 400%;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  background-size: 400% 400%;
+  background: linear-gradient(-45deg, #FCE5E5, #ff8787, #ffb8b8, #fcd6d6, #ff9898, #febbbb, #fdeeee);
+  background-size: 400% 400%;
+  border: none;
+  border-top: 4px solid
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite; ba(255,255,255,0);
 }
-/* 트게더 전체메뉴 / 유용한링크 / 트위치 스케쥴 */
-#main .menu-wrapper>.header {
 
-  background: #5ba3ff;
 
+/* advertisement tag */
+header #header-bar #header-top-notice strong.notice-badge {
+  background: transparent;
+  padding: 0px 4px;
+  font-weight: bold;
 }
 
-.fa-navicon:before,
 
-.fa-reorder:before,
+/* article part */
 
-.fa-bars:before {
-
-  color: white;
-
+#article-list>.article-list-row.notice {
+  background-color: #fff6f5;
+  border-top: 1px solid #ffd5d0;
 }
 
-.fa-square:before {
-
-  color: var(--forth-color);
-
+#article-list>.article-list-row>.item {
+  display: table-row;
+  text-align: center;
 }
 
-header #header-bar>.row,
+#article-list>.article-list-row>.item>.list-title>small.favo {
+  font-size: 11px;
+  line-height: 13px;
+  position: relative;
+  text-align: center;
+  padding: 0px 2px;
+  color: #f5cfcf;
+  word-break: break-word;
+  border-radius: 1px;
+  top: 3px;
+  float: left;
+}
 
-#main .menu-wrapper,
+#article-list>.article-list-row>.item>.list-title>small.favo> .fa-heart:before {
+  content: "\f004";
+  animation: infinite rainbowLink 3s;
+}
 
-#main #main-content>div.frame {
 
+/* hot post background */
+#article-list>.article-list-row.hot {
+  background-color: #f3f8ff;
+  border-top: 1px solid #8ab7ff;
+  border-bottom: 1px solid #8ab7ff;
+  -webkit-animation: ColorB 5s infinite;
+  -moz-animation: ColorB 5s infinite;
+  animation: ColorB 5s infinite;
+}
+
+#article-list>.article-list-row>.item>.list-title>.a-badge>.fa-star,
+#article-list>.article-list-row.hot>.item>.list-title>.a-badge>.fa-star {
+  opacity: .75;
+  color: transparent;
+  vertical-align: 2px!important;
+  width: 18px;
+  height: 16px;
+  background: url(https://github.com/yeongether/nnabi_css/blob/master/images/star01.gif?raw=true);
+  background-repeat: no-repeat;
+  background-size: 83%;
+  background-position: center 2px;
+  -webkit-animation: StarSS 2s infinite;
+  -moz-animation: StarSS 2s infinite;
+  animation: StarSS 2s infinite;
+}
+
+#article-list>.article-list-row>.item>.list-title>.list-writer {
+  float: right;
+  padding: 0px 11px;
+  border-left: none;
+  border-right: 1px solid #e2e2e2;
+  text-align: right;
+  min-height: 16px;
+  line-height: 16px;
+}
+
+#article-list #article-list-category > a {
+  display: inline-block;
+  padding: 11px 16px; background: var(--color-5);
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: bold
+}
+
+#article-list #article-list-category > a:hover {
+  animation: infinite AquaLinkBG 1.5s;
+}
+
+/* category background */
+#article-list #article-list-category {
+  border-top: 3px solid var(--color-4);
+  background:  -webkit-linear-gradient(45deg, var(--color-5) 0%, var(--color-5) 80%, var(--color-3) 100%);
+}
+
+
+/* like highlighter */
+#article-list > .article-list-row > .item > .list-header > span {
+  background-color: var(--color-4);
+  color: var(#fff);
+  font-weight: bold;
+  padding: 1px 5px;
+  font-size: 9.5px;
+  border-radius: 100px
+}
+
+
+/* toggle button for hiding notice */
+#article-list #article-option-area>#article-option-area-toggle-btn {
+  position: relative;
+  right: 14px;
+}
+
+
+/* tgd menu box */
+#main .menu-wrapper > .header {
+  background: -webkit-linear-gradient(45deg, var(--color-3) 10%,var(--color-5) 100%);
+  color: var(--color-0);
+  padding: 0.45em 1.4em 0.45em 1em;
+  font-weight: bold;
+  border-radius: 10px 10px 0 0;
+}
+
+#main .menu-wrapper > a { padding: 7px 3px; }
+#main .menu-wrapper > a > em { color: var(--color-3);}
+#main .menu-wrapper > a > i.fa.fa-square { color:var(--color-3); }
+
+
+/* 스케줄은 개별적용 */
+#main .menu-wrapper > .header > a {
+  color: var(--color-0);
+}
+
+
+/* remove nav box border */
+header #header-bar > .row,
+#main #main-content > div.frame {
   border-right: none;
-
   border-bottom: none;
-
+  border-radius: 10px 10px 0 0;
+  padding-top: 10px;
 }
 
 #main .menu-wrapper {
-
-  border: none;
-
+  border-right: none;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;  
 }
 
-header {
-  padding: 0 !important;
-}
 
-/* 헤더 [광고]배경색 */
-header #header-bar #header-top-notice strong.notice-badge {
-
-  background: var(--first-color);
-
-}
-/* fa색상 ( */
-header #header-bar .fa {
-    color: #104d99;
-}
-/* 트위치 광고 오른쪽 세로줄*/
-header #header-bar #header-menu-right {
-    border-left: 2px solid #5ba3ff;
-}
-/* 트위치 광고 왼쪽 세로줄*/
-header #header-bar #header-menu-left {
-    border-right: 2px solid #5ba3ff;
-    padding-right: 0;
-}
-/* 스트리머 게시판 상단 바*/
-#board-info {
-    border-top: 0px solid #2f8bff;
-    border-left: 0px solid #2f8bff;
-    border-right: 0px solid #2f8bff;
-    border-bottom: 0px solid #2f8bff;
-    overflow: inherit;
-    padding: 5px 5px 0px 10px;
-    margin: 0px 0 -0.1em;
-    height: 78px;
-    background-color: #def0ff;
-}
-/*즐겨찾기 프로필 채널 클립 위치 조정*/
-#board-info #board-info-bottom {
-    padding-top: 10px;
-}
-/* 말룡이3 프로필 사진 크기조정 */
-#board-info #board-info-profile-img {
-    width: 5.3em;
-    height: auto;
-    border-radius: 15px;
-    margin: -3px 0 0 0;
-    border: 2px solid #ff88c5;
-}
-/* 스트리머 게시판 상단 정보 글씨색상 */
-#board-info #board-info-bottom a {
-    color: #784b90;
-    font-size: 15px;
-    font-weight: bold;
-}
-/* 좌측메뉴 숏컷링크 글씨 색상 */
-#main .menu-wrapper>a>em {
-    color: #64c8ff;
-}
-/* 좌측메뉴 메뉴사이의 공간 색상 */
+/* nav box category distribute */
 #main .menu-wrapper .spacer {
-    background: #5ba3ff;
-    height: 0.15em;
-}
-/* 게시글 관련부분 */
-#article-list>.article-list-row>.item>.list-title>.list-writer>span {
-
-  width: 120px !important;
-
-}
-/* 룡게더 게시판 여백 설정 */
-#article-list {
-    position: relative;
-    width: 100%;
-    line-height: 1;
-    margin-top: 0.1em;
-    padding: 0 0em 2em;
-    background-color: #def0ff;
-}
-/* 룡게더 게시판 목록 바탕색*/
-#article-list #article-list-category>a {
-    background: #0e5488;
-}
-/* 룡게더 게시판 여백 부분 바탕색*/
-#article-list #article-list-category {
-    border-top: 2px solid #7f7dff;
-    background: #0e5488;
-}
-/* 홈마크 부분 바탕색 */
-#article-list #article-list-category > a.active,
- #article-list #article-list-category>a:hover {
-    background: #c3e3ff;
-}
-/* 공지란 바탕색 */
-#article-list>.article-list-row.notice {
-    background-color: #def0ff;
-}
-/* 게시글 바탕색 */
-#article-list>.article-list-row {
-    text-align: center;
-    display: table;
-    width: 100%;
-    border-right: 1px solid #f8f8f8;
-    background-color: #ffffff;
-}
-/*추천수 색상*/
-#article-list>.article-list-row>.item>.list-header>span {
-    background-color: #3bb4f6;
-}
-/*댓글수 색상*/
-#article-list>.article-list-row>.item>.list-title>small.comment-count {
-  color: #3bb4f6;
-}
-/*글작성자 색상*/
-#article-list>.article-list-row>.item>.list-title>.list-writer.logged>span {
-
-  color: #11008A;
-
-}
-/* 인기글 버튼 */
-#article-list #article-list-menu>.btn.best {
-    margin-left: 1em;
-}
-#article-list #article-list-menu>.btn.best {
-    position: absolute;
-    left: 0;
-    color: #efc839;
-    background-image: none;
-    background-color: #ffffff;
-    font-weight: bold;
-    border-color: #efc839;
-}
-/* 글쓰기 버튼 */
-#article-list #article-list-menu>.btn.write {
-    margin-right: 1em;
+  background: rgba(95,02,22,0);
+  height: 4px;
 }
 
-.btn-primary {
-    color: #fff;
-    background-color: #1c68aa;
-    border-color: #2e6da4;
+
+/* main shadow */
+header #header-bar > .row {
+  box-shadow: 3px 0px 10px rgba(0, 02, 22, 0.2);
+  border-radius: 0 0 15px 15px;
+}
+#main #main-content > div.frame {
+  box-shadow: 3px 0px 10px rgba(0, 02, 22, 0.2);
+  border-radius: 0 0 15px 15px;
+  background: -webkit-linear-gradient(135deg, var(--color-0) 0%,var(--color-0) 99%, var(--color-5) 99%,var(--color-3) 100%);
 }
 
-.pagination>.active>a,
 
-.pagination>.active>a:focus,
-
-.pagination>.active>a:hover,
-
-.pagination>.active>span,
-
-.pagination>.active>span:focus,
-
-.pagination>.active>span:hover {
-
-  background-color: #6995f3;
-
-  border-color: #6995f3;
-
+/* notice post mouse hovered */
+#article-list > .article-list-row.notice:hover {
+  animation: 30s anim_hovered_background;
 }
 
-.pagination>li>a:focus,
-
-.pagination>li>a:hover,
-
-.pagination>li>span:focus,
-
-.pagination>li>span:hover {
-
-  color: var(--first-color);
-
+.pagination > li > a:hover {
+  animation: infinite AquaLinkBG 1.5s;
 }
 
-.pagination>li>a,
-
-.pagination>li>span {
-
-  color: var(--first-color);
-
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover
+{
+  background-color: var(--color-4);
+  border-color: var(--color-4);
 }
-#article-content-wrapper>.header {
 
-  border-top: 2px solid var(--first-color);
-
+#article-content-wrapper > .header {
+  border-top: 3px solid var(--color-4);
+  background: var(--color-5);
 }
-#article-info>h2 {
 
+#article-content-wrapper > .footer {
+  border-bottom: 3px solid var(--color-4);
+  background: var(--color-5);
+}
+
+#article-reply-area #reply-real-area .reply > .reply-header {
+  background: var(--color-5);
+}
+
+#article-reply-area > .header h5 {
+  font-size: 12px;
+  color: var(--color-4);
   font-weight: bold;
-
-}
-#article-info>h2>span.category {
-
-  color: var(--first-color) !important;
-
-}
-#article-reply-area>.header h5 {
-
-  color: var(--first-color);
-
-}
-#main .menu-wrapper>a {
-
-  padding: 0.5em 1.4em 0.5em 0.7em !important;
-
-
-}
-/* 게시글 안쪽 여백*/
-#article-content-wrapper {
-    padding: 0px 0em 1em;
-}
-/* 글 제목 배경색 */
-#article-info {
-    width: 100%;
-    padding: 1em 1em 0.5em;
-    position: relative;
-    background-color: aliceblue;
-    border-top: 2px solid #7f7dff;
-}
-/* 게시글 상단 배경 */
-#article-content-wrapper>.header {
-    border-top: 2px solid #2f8bff;
-    background-color: #7dafff54;
-}
-/* 게시글 하단 배경 */
-#article-content-wrapper>.footer {
-    background: #d4e5ff;
-    padding: 0.5em 0.8em;
-}
-/* 댓글 작성자 색상*/
-#article-reply-area #reply-real-area .reply>.reply-header>.reply-writer.logged,
-#article-reply-area #reply-best-area .reply>.reply-header>.reply-writer.logged {
-    color: #337ab7;
-}
-/* 댓글 배경 */
-#article-reply-area #reply-real-area .reply > .reply-header, #article-reply-area #reply-best-area .reply>.reply-header {
-    background: #f0f6ffa8;
-    border-bottom: 1px solid #2f8bff;
-    padding: 0.4em 0.5em;
-}
-/*댓글란 여백*/
-#article-reply-area #reply-real-area, #article-reply-area #reply-best-area {
-    padding: 0px 1em;
-    width: 100%;
-}
-/*하단 이용약관 개인정보보호방침 광고문의 모바일버전으로 전환하기 색상*/
-
-a {
-
-  color: #blue;
-
 }
 
-span.a-badge i.fa.fa-info-circle {
-
-  color: #0087ff
-
+#article-content-wrapper > .header > #article-comment > .fa-commenting:before {
+  content: "\f27a";
+  color: #ff8787;
 }
 
-header #header-bar .fa {
-    color: #104d99;
-    left: -500px;
-    top: -500px;
+#article-content-wrapper > .header > #article-votes > .fa-heart:before {
+  content: "\f004";
+  animation: infinite rainbowLink 3s;
 }
 
-.fa-user:before {
-	
-    content: "";
+#article-content-wrapper > .header > #article-views > .fa-eye:before {
+  content: "\f06e";
+  color: #ff5c5c;
 }
 
 
-.fa-user {
-    float: left;
-    position: absolute;
-    width: 540px;
-    height: 130px;
-    background: url() no-repeat;
-	background-size: 540px auto;
-    margin: -196.5px 0 0 -112px;
-    text-indent: -9999px;
+/* article part */
+#article-info .article-profile-img {
+  position: absolute;
+  top: 1em;
+  width: 3em;
+  height: auto;
 }
 
-header .row {
-	background-repeat: no-repeat;
-    display: block;
-    height: 120px;
-	background-image: url(https://upload.tgd.kr/20190301/1ae3476d9d567e6439e366d4ad38b3bf.png);
-	background-size: 523px auto;
-    background-position-x: 290px;
-    background-position-y: 0px;
-    margin-bottom: -14px;
+#article-info > .h2 {
+  font-size: 20px;
+  width: 750px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
-header #header-bar {
-    margin-top: 1em;
-    margin-bottom: 1em;
-    padding-right: 30px;
-    padding-left: 30px;
+#article-reply-area #reply-real-area .reply > .reply-header > .reply-menu a,
+#article-reply-area #reply-real-area .reply > .reply-header span.middot {
+  color: #ff5c5c;
+}
+
+#article-reply-area #reply-real-area .reply > .reply-header > .reply-writer-image {
+  width: 2.2em;
+  height: 2.2em;
+  margin-right: 0.9em;
+  float: left;
+  margin-left: 0.5em;
 }
 
 
+/* viewer board info */
 
-@-webkit-keyframes fade-out {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes fade-out {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+#board-info, div.frame { 
+  background:#FFF
 }
 
-@-webkit-keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+#board-info { 
+  display: flex;
+  height: 50px;
+  padding: 1em; 
+  border-radius: 10px;
+  align-items: center; 
+  justify-content: center
 }
 
-#board-info h1>a {
-    opacity: 0;
-    color: #181d1a00;
+#board-info #board-info-bottom {
+  flex: auto;
+  text-align: right
+}
+
+#board-info #board-info-bottom a {
+ border: 0;
+ color: #d7abff
 }
 
 #board-info h1 {
-    background-repeat: no-repeat;
-    background-image: url(https://upload.tgd.kr/20181220/2ae5f723cc0c14b7d85850f46e99704f.png);
-    background-size: 100px;
-    height: 34px;
-    background-position: 0px 0px;
+  border-bottom: 0;
 }
 
-#article-list-row-9490238 .item .list-title {
-    background: url(https://upload.tgd.kr/20181207/2816e6603c62a402dc3238622fd36614.png) no-repeat;
-    background-size: auto 104px;
-    background-position: 260px bottom;
-    background-position-y: top;
+#board-info #board-info-profile-img {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: -15px;
+  left: 5px;
+  border: 3px solid #ff8787;
+  border-radius: 50%
 }
-#article-list-row-3723976 .item .list-title {
-    background: url(https://upload.tgd.kr/20181207/2816e6603c62a402dc3238622fd36614.png) no-repeat;
-    background-size: auto 104px;
-    background-position: 260px bottom;
-    background-position-y: center;
-}
-#article-list-row-2700434 .item .list-title {
-    background: url(https://upload.tgd.kr/20181207/2816e6603c62a402dc3238622fd36614.png) no-repeat;
-    background-size: auto 104px;
-    background-position: 260px bottom;
-}
-
-/* 인기글 바탕색 */
-#article-list>.article-list-row.hot {
-    background-color: #fff7c6;
-}
-
-#board-info h1>a.badge.badge-live {
-    background: #c00;
-    color: #fff;
-    text-decoration: none;
-    MARGIN: 0px 0px 0px 40px;
-    opacity: 1;
-}
-
-[title=Moderator] {
-	display:none;
-}
 
-
-.fr-popup.emoticons {
-    width: 560px;
-    height: 220px;
-}
-
-.fr-popup .fr-emoticon img {
-    width: 25px !important;
-    height: 25px !important;
-}
-
-.fr-popup.emoticons br {
-    display: none;
+#board-info #board-info-bottom,
+#board-info h1 {
+  margin-left: 60px;
+  padding: 0
 }
-
 
-
-span[data-param1="JKanStyle"] img {
-    background: url(https://66.media.tumblr.com/d2aaef73c2fdc0bac1e2bcb6ff3fa1a5/tumblr_pkku5rp5hd1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
+.badge {
+  margin: 2px;
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: #febbbb;
+  border-radius: 10px;
 }
 
-img[alt="JKanStyle"], #article-content-wrapper #article-content img[alt="JKanStyle"] {
-    background: url(https://66.media.tumblr.com/d2aaef73c2fdc0bac1e2bcb6ff3fa1a5/tumblr_pkku5rp5hd1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="OptimizePrime"] img {
-    background: url(https://66.media.tumblr.com/3a0dfbdc3c7405b5a32998ef096882b9/tumblr_pkriltAT0f1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
+#board-info h1 > a {
+  text-decoration: none;
+  color: #ff8787;
 }
 
-img[alt="OptimizePrime"], #article-content-wrapper #article-content img[alt="OptimizePrime"] {
-    background: url(https://66.media.tumblr.com/3a0dfbdc3c7405b5a32998ef096882b9/tumblr_pkriltAT0f1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
+#board-info #viewers-area #viewers:before {
+  content: var(--pre-comment);
+  cursor: text;
 }
 
-span[data-param1="SwiftRage"] img {
-    background: url(https://66.media.tumblr.com/9ffb1f79e0ce6ac9a02fbee0d94795a4/tumblr_pkrilhFKdV1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
+#board-info #viewers-area #viewers:after {
+  content: var(--sub-comment);
+  cursor : text;
 }
 
-img[alt="SwiftRage"], #article-content-wrapper #article-content img[alt="SwiftRage"] {
-    background: url(https://66.media.tumblr.com/9ffb1f79e0ce6ac9a02fbee0d94795a4/tumblr_pkrilhFKdV1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-
-span[data-param1="StoneLightning"] img {
-    background: url(https://66.media.tumblr.com/f82032a21858d60f84a23522fe66de08/tumblr_pkril8ekcc1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="StoneLightning"], #article-content-wrapper #article-content img[alt="StoneLightning"] {
-    background: url(https://66.media.tumblr.com/f82032a21858d60f84a23522fe66de08/tumblr_pkril8ekcc1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="TheRinger"] img {
-    background: url(https://66.media.tumblr.com/f27250c20c47c9708dda50385f238513/tumblr_pkrikxAzEf1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="TheRinger"], #article-content-wrapper #article-content img[alt="TheRinger"] {
-    background: url(https://66.media.tumblr.com/f27250c20c47c9708dda50385f238513/tumblr_pkrikxAzEf1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="RedCoat"] img {
-    background: url(https://66.media.tumblr.com/e9e17495ad5cfec5ef8b8e26f95e18d4/tumblr_pkrikoib3d1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="RedCoat"], #article-content-wrapper #article-content img[alt="RedCoat"] {
-    background: url(https://66.media.tumblr.com/e9e17495ad5cfec5ef8b8e26f95e18d4/tumblr_pkrikoib3d1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-
-span[data-param1="PJSalt"] img {
-    background: url(https://66.media.tumblr.com/e19dff1674e2ade5a6d251b084329fd7/tumblr_pkrikcHxGa1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="PJSalt"], #article-content-wrapper #article-content img[alt="PJSalt"] {
-    background: url(https://66.media.tumblr.com/e19dff1674e2ade5a6d251b084329fd7/tumblr_pkrikcHxGa1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="DansGame"] img {
-    background: url(https://66.media.tumblr.com/473759d5b8b96f85fddba2890b57de91/tumblr_pksy0gl0lO1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="DansGame"], #article-content-wrapper #article-content img[alt="DansGame"] {
-    background: url(https://66.media.tumblr.com/473759d5b8b96f85fddba2890b57de91/tumblr_pksy0gl0lO1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="GingerPower"] img {
-    background: url(https://66.media.tumblr.com/a649971d0b1acc495f193b28fb065f04/tumblr_pksypkO5Tx1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="GingerPower"], #article-content-wrapper #article-content img[alt="GingerPower"] {
-    background: url(https://66.media.tumblr.com/a649971d0b1acc495f193b28fb065f04/tumblr_pksypkO5Tx1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="KevinTurtle"] img {
-    background: url(https://66.media.tumblr.com/6c379a071d948c185dccb7d4ac1669bf/tumblr_pku7ylKwgP1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="KevinTurtle"], #article-content-wrapper #article-content img[alt="KevinTurtle"] {
-    background: url(https://66.media.tumblr.com/6c379a071d948c185dccb7d4ac1669bf/tumblr_pku7ylKwgP1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="JonCarnage"] img {
-    background: url(https://66.media.tumblr.com/fa888d5bd079b089869660619a557718/tumblr_pku7ytEeI91xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="JonCarnage"], #article-content-wrapper #article-content img[alt="JonCarnage"] {
-    background: url(https://66.media.tumblr.com/fa888d5bd079b089869660619a557718/tumblr_pku7ytEeI91xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="OneHand"] img {
-    background: url(https://66.media.tumblr.com/3676e3c30a070abbe5b9b360ed01bcf2/tumblr_pku7z3nxbG1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="OneHand"], #article-content-wrapper #article-content img[alt="OneHand"] {
-    background: url(https://66.media.tumblr.com/3676e3c30a070abbe5b9b360ed01bcf2/tumblr_pku7z3nxbG1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-
-
-span[data-param1="FrankerZ"] img {
-    background: url(https://66.media.tumblr.com/267908de238a424a31bda3db3efb35c0/tumblr_pku7ycKP5q1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="FrankerZ"], #article-content-wrapper #article-content img[alt="FrankerZ"] {
-    background: url(https://66.media.tumblr.com/267908de238a424a31bda3db3efb35c0/tumblr_pku7ycKP5q1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="PunchTrees"] img {
-    background: url(https://66.media.tumblr.com/09a9f78bba62928fd24b697da50ed7ee/tumblr_pkutl7YqqR1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="PunchTrees"], #article-content-wrapper #article-content img[alt="PunchTrees"] {
-    background: url(https://66.media.tumblr.com/09a9f78bba62928fd24b697da50ed7ee/tumblr_pkutl7YqqR1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="HassanChop"] img {
-    background: url(https://66.media.tumblr.com/d5a78000c8a11c1a0262aaeb5003299b/tumblr_pkutl0xNEK1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="HassanChop"], #article-content-wrapper #article-content img[alt="HassanChop"] {
-    background: url(https://66.media.tumblr.com/d5a78000c8a11c1a0262aaeb5003299b/tumblr_pkutl0xNEK1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="PMSTwin"] img {
-    background: url(https://66.media.tumblr.com/e2f4c0f5d2447e3763c12aa9fc5341c7/tumblr_pkutkq2WMd1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="PMSTwin"], #article-content-wrapper #article-content img[alt="PMSTwin"] {
-    background: url(https://66.media.tumblr.com/e2f4c0f5d2447e3763c12aa9fc5341c7/tumblr_pkutkq2WMd1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="ArsonNoSexy"] img {
-    background: url(https://66.media.tumblr.com/547bde445c5c07ffe8ab19e77b67a99a/tumblr_pkutki9Imc1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="ArsonNoSexy"], #article-content-wrapper #article-content img[alt="ArsonNoSexy"] {
-    background: url(https://66.media.tumblr.com/547bde445c5c07ffe8ab19e77b67a99a/tumblr_pkutki9Imc1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="SMOrc"] img {
-    background: url(https://66.media.tumblr.com/be082dbb609ebfa53413e45b8048360d/tumblr_pkutk86p7j1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="SMOrc"], #article-content-wrapper #article-content img[alt="SMOrc"] {
-    background: url(https://66.media.tumblr.com/be082dbb609ebfa53413e45b8048360d/tumblr_pkutk86p7j1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-
-span[data-param1="HotPokket"] img {
-    background: url(https://66.media.tumblr.com/4e82532fc1d4991da70a96b274e3e475/tumblr_pkys0bqCLh1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="HotPokket"], #article-content-wrapper #article-content img[alt="HotPokket"] {
-    background: url(https://66.media.tumblr.com/4e82532fc1d4991da70a96b274e3e475/tumblr_pkys0bqCLh1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="DAESuppy"] img {
-    background: url(https://66.media.tumblr.com/e5827fc9aadec682f253e77fb8354d39/tumblr_pkys0qUagN1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="DAESuppy"], #article-content-wrapper #article-content img[alt="DAESuppy"] {
-    background: url(https://66.media.tumblr.com/e5827fc9aadec682f253e77fb8354d39/tumblr_pkys0qUagN1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="WholeWheat"] img {
-    background: url(https://66.media.tumblr.com/6e5507946e351f26af267bdf32cd5cdd/tumblr_pkys0kvae71xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="WholeWheat"], #article-content-wrapper #article-content img[alt="WholeWheat"] {
-    background: url(https://66.media.tumblr.com/6e5507946e351f26af267bdf32cd5cdd/tumblr_pkys0kvae71xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="ThunBeast"] img {
-    background: url(https://66.media.tumblr.com/b35206bb4d595162e94cbdaf366ee809/tumblr_pkys0ygSBh1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="ThunBeast"], #article-content-wrapper #article-content img[alt="ThunBeast"] {
-    background: url(https://66.media.tumblr.com/b35206bb4d595162e94cbdaf366ee809/tumblr_pkys0ygSBh1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="PogChamp"] img {
-    background: url(https://66.media.tumblr.com/1415e48b2d38f56aa537bf973257a1d6/tumblr_pkys17tUZl1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="PogChamp"], #article-content-wrapper #article-content img[alt="PogChamp"] {
-    background: url(https://66.media.tumblr.com/1415e48b2d38f56aa537bf973257a1d6/tumblr_pkys17tUZl1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="ShazBotstix"] img {
-    background: url(https://66.media.tumblr.com/5873c6d643a3ce01fb3ba0ad03e6341f/tumblr_pkysdbs9ae1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="ShazBotstix"], #article-content-wrapper #article-content img[alt="ShazBotstix"] {
-    background: url(https://66.media.tumblr.com/5873c6d643a3ce01fb3ba0ad03e6341f/tumblr_pkysdbs9ae1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="AsianGlow"] img {
-    background: url(https://66.media.tumblr.com/89cdee7a116f6e8b541744010cba89d4/tumblr_pkysdkBALw1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="AsianGlow"], #article-content-wrapper #article-content img[alt="AsianGlow"] {
-    background: url(https://66.media.tumblr.com/89cdee7a116f6e8b541744010cba89d4/tumblr_pkysdkBALw1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="FUNgineer"] img {
-    background: url(https://66.media.tumblr.com/a1fe8135703fe77aac95c781c27b1eeb/tumblr_pl2aesllrc1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="FUNgineer"], #article-content-wrapper #article-content img[alt="FUNgineer"] {
-    background: url(https://66.media.tumblr.com/a1fe8135703fe77aac95c781c27b1eeb/tumblr_pl2aesllrc1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="4Head"] img {
-    background: url(https://66.media.tumblr.com/f5bcaf2979343271faa55f9ebfd8c2d8/tumblr_pl2aczSOZq1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="4Head"], #article-content-wrapper #article-content img[alt="4Head"] {
-    background: url(https://66.media.tumblr.com/f5bcaf2979343271faa55f9ebfd8c2d8/tumblr_pl2aczSOZq1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-
-span[data-param1="RalpherZ"] img {
-    background: url(https://66.media.tumblr.com/721459964f0ba2765e48dbcb59d50943/tumblr_pl2acjoLST1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="RalpherZ"], #article-content-wrapper #article-content img[alt="RalpherZ"] {
-    background: url(https://66.media.tumblr.com/721459964f0ba2765e48dbcb59d50943/tumblr_pl2acjoLST1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="Kippa"] img {
-    background: url(https://66.media.tumblr.com/b369e49d225217b6f0917195b6c613f2/tumblr_pl2ac9g7Yi1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="Kippa"], #article-content-wrapper #article-content img[alt="Kippa"] {
-    background: url(https://66.media.tumblr.com/b369e49d225217b6f0917195b6c613f2/tumblr_pl2ac9g7Yi1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="Keepo"] img {
-    background: url(https://66.media.tumblr.com/8f2120c7af48e35d54d456a50b961577/tumblr_pl2ac3dmEW1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="Keepo"], #article-content-wrapper #article-content img[alt="Keepo"] {
-    background: url(https://66.media.tumblr.com/8f2120c7af48e35d54d456a50b961577/tumblr_pl2ac3dmEW1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="BigBrother"] img {
-    background: url(https://66.media.tumblr.com/5f18e90928c216ee0075d2edb1ac27c4/tumblr_pl2abnNYwk1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="BigBrother"], #article-content-wrapper #article-content img[alt="BigBrother"] {
-    background: url(https://66.media.tumblr.com/5f18e90928c216ee0075d2edb1ac27c4/tumblr_pl2abnNYwk1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-
-
-span[data-param1="SoBayed"] img {
-    background: url(https://66.media.tumblr.com/05219eb0bfef82ec91bbd519449d5a36/tumblr_pl2abc0CIU1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="SoBayed"], #article-content-wrapper #article-content img[alt="SoBayed"] {
-    background: url(https://66.media.tumblr.com/05219eb0bfef82ec91bbd519449d5a36/tumblr_pl2abc0CIU1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-
-span[data-param1="PeoplesChamp"] img {
-    background: url(https://66.media.tumblr.com/f728e942986afc099b6b2072d6b9f6f7/tumblr_pl2ab3gD6S1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="PeoplesChamp"], #article-content-wrapper #article-content img[alt="PeoplesChamp"] {
-    background: url(https://66.media.tumblr.com/f728e942986afc099b6b2072d6b9f6f7/tumblr_pl2ab3gD6S1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="TF2John"] img {
-    background: url(https://66.media.tumblr.com/15013249b22ff9bbec791b2ab6d43b39/tumblr_pl2acpZSeg1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="TF2John"], #article-content-wrapper #article-content img[alt="TF2John"] {
-    background: url(https://66.media.tumblr.com/15013249b22ff9bbec791b2ab6d43b39/tumblr_pl2acpZSeg1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-
-
-/*닉넴옆 아이콘 높이조절*/
-#article-list>.article-list-row>.item>.list-title>.list-writer>span {
-
-    height: 23px;
-
-}
-/*닉넴옆 아이콘 여백조절*/
-#article-list>.article-list-row>.item>.list-title>.list-writer {
-    padding: 10px 11px;
-    margin-top: -10px;
-    height: 25px;
-}
-span[data-param1="GrammarKing"] img {
-    background: url(https://66.media.tumblr.com/b3ae457cc1f809487f60e04b08bb3d1a/tumblr_plfgzpa8VM1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="GrammarKing"], #article-content-wrapper #article-content img[alt="GrammarKing"] {
-    background: url(https://66.media.tumblr.com/b3ae457cc1f809487f60e04b08bb3d1a/tumblr_plfgzpa8VM1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="PanicVis"] img {
-    background: url(https://66.media.tumblr.com/3aa7cee49c6bcd123965b88d1f12b513/tumblr_plfgzkNzgT1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="PanicVis"], #article-content-wrapper #article-content img[alt="PanicVis"] {
-    background: url(https://66.media.tumblr.com/3aa7cee49c6bcd123965b88d1f12b513/tumblr_plfgzkNzgT1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="ANELE"] img {
-    background: url(https://66.media.tumblr.com/ff3098678b6b28923e49b2f00ad166b7/tumblr_plfgzeCF5D1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="ANELE"], #article-content-wrapper #article-content img[alt="ANELE"] {
-    background: url(https://66.media.tumblr.com/ff3098678b6b28923e49b2f00ad166b7/tumblr_plfgzeCF5D1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="BrokeBack"] img {
-    background: url(https://66.media.tumblr.com/2bdc38fddaf2b9cd1faf670c656c374a/tumblr_plfgz0kqpj1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="BrokeBack"], #article-content-wrapper #article-content img[alt="BrokeBack"] {
-    background: url(https://66.media.tumblr.com/2bdc38fddaf2b9cd1faf670c656c374a/tumblr_plfgz0kqpj1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-       
-span[data-param1="PipeHype"] img {
-    background: url(https://66.media.tumblr.com/661e84bccf740b0e9fa5fa45d7f41106/tumblr_plfgyrV2NE1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="PipeHype"], #article-content-wrapper #article-content img[alt="PipeHype"] {
-    background: url(https://66.media.tumblr.com/661e84bccf740b0e9fa5fa45d7f41106/tumblr_plfgyrV2NE1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="YouWHY"] img {
-    background: url(https://66.media.tumblr.com/5ff2d1248358e8f11723caeb2707fcca/tumblr_plfgycv4qN1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="YouWHY"], #article-content-wrapper #article-content img[alt="YouWHY"] {
-    background: url(https://66.media.tumblr.com/5ff2d1248358e8f11723caeb2707fcca/tumblr_plfgycv4qN1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="RitzMitz"] img {
-    background: url(https://66.media.tumblr.com/d9a7a3ab46fbab60382f874fbf941a30/tumblr_plfgy1mI3f1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="RitzMitz"], #article-content-wrapper #article-content img[alt="RitzMitz"] {
-    background: url(https://66.media.tumblr.com/d9a7a3ab46fbab60382f874fbf941a30/tumblr_plfgy1mI3f1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-span[data-param1="EleGiggle"] img {
-    background: url(https://66.media.tumblr.com/1e6d5ef949690c36a64770a2f6862660/tumblr_plgc3dZv031xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="EleGiggle"], #article-content-wrapper #article-content img[alt="EleGiggle"] {
-    background: url(https://66.media.tumblr.com/1e6d5ef949690c36a64770a2f6862660/tumblr_plgc3dZv031xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-
-span[data-param1="TheThing"] img {
-    background: url(https://66.media.tumblr.com/68a1766c2cfa9880348c64520d96fbb5/tumblr_plgc31cqYh1xyy3p1o1_75sq.gif)no-repeat;
-    width: 25px;
-    padding-left: 25px;
-	padding-top: 25px;
-    background-size: 25px 25px;
-}
-
-img[alt="TheThing"], #article-content-wrapper #article-content img[alt="TheThing"] {
-    background: url(https://66.media.tumblr.com/68a1766c2cfa9880348c64520d96fbb5/tumblr_plgc31cqYh1xyy3p1o1_75sq.gif);
-    width: 50px;
-    height: 50px !important;
-    padding-left: 50px;
-    background-size: 50px 50px;
-}
-
-/*반하루 햄버거->용편육*/
-img[src="https://static-cdn.jtvnw.net/badges/v1/278abed1-f9e2-4a03-b7e4-a509c72f0b93/1"] {
-    content: url(https://static-cdn.jtvnw.net/badges/v1/de532ecd-659e-4072-bd20-981f0ea9b14e/1?raw=true);
-}
-
-/*오징어곤듀->gif테스트*/
-img[src="https://static-cdn.jtvnw.net/badges/v1/27349c72-924d-4438-83eb-dc03ad3aed90/1"] {
-    content: url(https://66.media.tumblr.com/c8ebe04ca2df59c0266924ac2be8f6ec/tumblr_pldmvd3XKG1xyy3p1o1_75sq.gif?raw=true);
-	block-size: 18px;
-}
-/*양지민_->gif테스트2*/
-img[src="https://static-cdn.jtvnw.net/badges/v1/0c798b60-2bce-4989-8fda-271ad63ddf98/1"] {
-    content: url(https://66.media.tumblr.com/06d8200cbb1c85c170c91fce762c81e3/tumblr_pldglcrLZu1xyy3p1o1_75sq.png?raw=true);
-	block-size: 18px;
+/* badge at viewer box */
+#board-info #viewers-area .fa-user:before {
+  color: rgba(95,02,22,0);
+  content: var(--icon-URL); }
+
+/* ButtonAnim */
+.btn-primary {
+  background: var(--color-4);
+  border-color: var(--color-1);
+}
+
+.btn-primary:hover {
+  animation: infinite rainbowLinkBG 3s;
+}
+
+
+/* recommend button */
+.btn-outline-success {
+  color: #fe9090;
+  background-image: none;
+  background-color: transparent;
+}
+
+.vote-btn[data-type="up"] {
+  border: none;
+  font-size: 0;
+}
+
+.vote-btn[data-type="up"]:hover {
+  background: none !important;
+}
+
+.vote-btn[data-type="up"]::before {
+  display: inline-block;
+  line-height: 0.89;
+  background: white;
+  border: solid #fe9090 1px;
+  float: left;
+  width: 45px;
+  height: 45px;
+  border-radius: 45px;
+  font-size: 17pt;
+  content: "\f164";
+  padding-top: 10px;
+  padding-left: 2px;
+  font: normal 22px/1 FontAwesome;
+  -moz-transition:color .2s ease;
+  -o-transition:color .2s ease;
+  -ms-transition:color .2s ease;
+  -webkit-transition:color .2s ease;
+  transition:color .2s ease;
+}
+
+.vote-btn[data-type="up"]:hover::before {
+  background: #fe9090;
+  color: white
+}
+
+.vote-btn[data-type="up"] span {
+  float: left;
+  padding-top: 10px;
+  padding-left: 15px;
+  font-size: 20px;
+  color: #fe9090;
+}
+
+/* delete focusing effect (blue outline box) */
+*:focus { outline: none !important; }
+
+/* movetotop object */
+#movetotop img {
+  display:none;
+}
+
+#movetotop {
+  display: inline-block: inline-block;
+  opacity: 0.8;
+  background: url("https://github.com/yeongether/nnabi_css/blob/master/images/niniz2.gif?raw=true");
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 80px;
+  background-size: contain;
+}
+
+/* keyframe animations */
+@keyframes rainbowLink {
+  000% { color: var(--color-0); }
+  010% { color: var(--color-1); }
+  020% { color: var(--color-2); }
+  030% { color: var(--color-3); }
+  040% { color: var(--color-4); }
+  050% { color: var(--color-5); }
+  060% { color: var(--color-4); }
+  070% { color: var(--color-3); }
+  080% { color: var(--color-2); }
+  090% { color: var(--color-1); }
+  100% { color: var(--color-0); }
+}
+@keyframes rainbowLinkBG {
+  000% { background-color: var(--color-0); }
+  010% { background-color: var(--color-1); }
+  020% { background-color: var(--color-2); }
+  030% { background-color: var(--color-3); }
+  040% { background-color: var(--color-4); }
+  050% { background-color: var(--color-5); }
+  060% { background-color: var(--color-4); }
+  070% { background-color: var(--color-3); }
+  080% { background-color: var(--color-2); }
+  090% { background-color: var(--color-1); }
+  100% { background-color: var(--color-0); }
+}
+@keyframes AquaLinkBG {
+  0% { background-color: var(--color-5); }
+  40% { background-color: var(--color-4); }
+  100% { background-color: var(--color-5); }
+}
+@keyframes anim_hovered_background {
+  0% { background-color: var(#fe9090); }
+  1% { background-color: var(--color-5); }
+}
+
+@-webkit-keyframes StarSS {
+  0% { transform:scale(.75) }
+  20% { transform:scale(1) } 
+  40% { transform:scale(.75) } 
+  60% { transform:scale(1) } 
+  80% { transform:scale(.75) } 
+  100% { transform:scale(.75) }
+}
+
+@-moz-keyframes StarSS {
+  0% { transform:scale(.75) } 
+  20% { transform:scale(1) } 
+  40% { transform:scale(.75) } 
+  60% { transform:scale(1) }
+  80% { transform:scale(.75) } 
+  100% { transform:scale(.75) }
+}
+
+@keyframes StarSS {
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+
+  0% { transform:scale(.75) }
+  20% { transform:scale(1) }
+  40% { transform:scale(.75) }
+  60% { transform:scale(1) }
+  80% { transform:scale(.75) }
+  100% { transform:scale(.75) }
+}
+
+@-webkit-keyframes ColorA {
+  0% { color:#67a6ff }
+  20% { color:#ef6ee5 }
+  40% { color:#ff897a }
+  60% { color:#97c566 }
+  100% { color:#67a6ff }
+}
+
+@-moz-keyframes ColorA {
+  0% { color:#67a6ff }
+  20% { color:#ef6ee5 }
+  40% { color:#ff897a }
+  60% { color:#97c566 }
+  100% { color:#67a6ff }
+}
+
+@keyframes ColorA {
+  0% { color:#67a6ff }
+  20% { color:#ef6ee5 }
+  40% { color:#ff897a }
+  60% { color:#97c566 }
+  100% { color:#67a6ff }
+}
+
+@-webkit-keyframes ColorB {
+  0% { border-color: #67a6ff; background-color: #e4efff }
+  20% { border-color: #ef6ee5; background-color: #ffecfe }
+  40% { border-color: #ff897a; background-color: #ffefed }
+  60% { border-color: #97c566; background-color: #f1ffe2 }
+  100% { border-color: #67a6ff; background-color:#e7f1ff }
+}
+
+@-moz-keyframes ColorB { 
+  0% { border-color: #67a6ff; background-color: #e4efff }
+  20% { border-color: #ef6ee5; background-color: #ffecfe }
+  40% { border-color: #ff897a; background-color: #ffefed }
+  60% { border-color: #97c566; background-color: #f1ffe2 }
+  100% { border-color: #67a6ff; background-color: #e7f1ff }
+}
+
+@keyframes ColorB {
+  animation-duration: 5s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+
+  0% { border-color: #67a6ff; background-color: #e4efff }
+  20% { border-color: #ef6ee5; background-color: #ffecfe }
+  40% { border-color: #ff897a; background-color: #ffefed }
+  60% { border-color: #97c566; background-color: #f1ffe2 }
+  100% { border-color: #67a6ff; background-color: #e7f1ff }
+}
+
+@-webkit-keyframes Gradient {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+@-moz-keyframes Gradient {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+@keyframes Gradient {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+@keyframes bingle {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
 }
