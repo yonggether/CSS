@@ -598,9 +598,9 @@ header #header-bar .fa {
     position: absolute;
     width: 540px;
     height: 130px;
-    background: url() no-repeat;
-	background-size: 540px auto;
-    margin: -196.5px 0 0 -112px;
+    background: url(https://github.com/yonggether/malryong2_CSS/blob/master/Image_files/pc%EB%B0%B0%EB%84%88.png?raw=true) no-repeat;
+    background-size: 540px auto;
+    margin: -192.5px 0 0 -112px;
     text-indent: -9999px;
 }
 
